@@ -1,36 +1,55 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# next13-nextauth-oauth2.0
 
-## Getting Started
+이 프로젝트는 Next.js, React, JavaScript를 기반으로 구축되었으며, Next Auth 라이브러리를 활용하여 OAuth 2.0을 기반으로 한 소셜 로그인 기능을 제공합니다. (네이버/카카오/구글)
 
-First, run the development server:
+또한, Tailwind CSS를 사용하여 반응형 디자인을 구현하고 있습니다.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
+
+
+
+## Run
+
+### 1. NPM install 
+```shell
+npm i
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 2. 애플리케이션 환경 설정
+```shell
+.env 파일을 열어 아래 빈 값 채워넣기.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+NEXTAUTH_SECRET=    # https://next-auth.js.org/configuration/options#secret 참고
+NEXT_PUBLIC_CALLBACKURL=http://localhost:3000
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+# OAuth Key - Kakao
+OAUTH_KAKAO_CLIENT_ID=
+OAUTH_KAKAO_CLIENT_SECRET=
 
-## Learn More
+# OAuth key - Google
+OAUTH_GOOGLE_CLIENT_ID=
+OAUTH_GOOGLE_CLIENT_SECRET=
 
-To learn more about Next.js, take a look at the following resources:
+# OAuth key - Naver
+OAUTH_NAVER_CLIENT_ID=
+OAUTH_NAVER_CLIENT_SECRET=
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 3. 애플리케이션 실행
+```shell
+npm run dev 
+또는
+next dev
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+### 4. 실행 확인
+- localhost:3000
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 로그인 페이지 확인
+![img.png](public/github/img.png)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Reference
+https://next-auth.js.org/getting-started/introduction
+
+https://nextjs.org/docs
